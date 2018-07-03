@@ -1,7 +1,12 @@
 #!/bin/bash 
-# This Program is to Show user the commands to create a bash script
-# to execute this program type at terminal ./'I want to write a bash program
+# This Program is to Show user the commands and or to create a bash script
+# to execute this program type at terminal ./ICode.bash
+# I am attempting to have the program open the named file with the header 
+# shebang at the top #!/bin/bash as it is not there you will need to add it.
+# created by plutesci for self or public use.
+
 clear
+banner "Icode"
 echo Showing the command line steps to start a Hello World program
 echo Where you see test.sh, Please rename test.sh
 echo Follow Steps Below...
@@ -15,15 +20,18 @@ echo nano test.sh	# change test.sh
 # I want to add an option to ask user if they want to start a new bash \
 # program yes \ no? 
 # if yes\Yes query user for new name, What to call this bash ? ...... 
+# I am happy with the the selection part but would like it going into a menu 
+# afterwards with press 9 return to previous menu
 
-#today() {
-#echo -n "Today's date is: "
-#date +"%A, %B %-d, %Y"
-#}
-#set +x
+######## Things to improve on.
+
+# when playing i found a program called openvt, It would be great to have the 
+# bash program open virtual termin and run the output 
 echo -n "Please Enter a Filename For Your New Bash Script > "
 read text
 echo "Your New Bash Script is named: $text"
+
+# chmod +x $text.bash
 
 # I need to figure out how to add .bash to the $text varable 
 
@@ -31,11 +39,13 @@ selection=
 until [ "$selection" = "0" ]; do
 echo "
 ICODE MENU
-1 - Start a new Bash Script
-2 - Start a new HTML Document
-3 - start a new Python Idle
-4 - Start a new php program
-5 - start a New Ruby Code
+1 - Start a new Bash Script 
+2 - Make it Executable
+3 - Run Bash Program
+4 - Prep add a shebang
+5 - start a new Python Idle
+6 - Start a new php program
+7 - start a New Ruby Code
 
 0 - exit program
 "
@@ -43,12 +53,25 @@ ICODE MENU
 	read selection
 	echo ""
 	case $selection in
-	1 ) nano $text:.bash ;;
-	2 ) nano ;;
-	3 ) idle ;;
-	4 ) nano ;;
-	5 ) nano ;;
+	1 ) nano $text.bash ; umask 022 $text.bash ;;
+	2 ) chmod 755 $text.bash ;;
+	3 ) openvt -f ;;
+	4 ) cat > $text.bash | `#!/bin/bash` ;;
+	5 ) idle ;;
+	6 ) nano ;;
+	7 ) nano ;;
 	0 ) exit ;;
 	* ) echo "Please enter 1, 2, 3, 4, 5, or 0"
 	esac
 done
+
+# Things I would like to add to the program would be a auto statment maker 
+# and auto create bash programs like open the randomly grep for certain 
+# keywords, and random cut from a libary of scripts 10 - 100 scripts
+# run it in a virtual terminal, looking for errors and print out example
+# 3 out of 100  run with no errors, would you like to view these?
+# 17 out of 100 return a slight error, would you like to inspec these.
+# 83% percent should be removed. something like that just visualising it out
+
+# My first bash application would like any help, still trying to learn how 
+# github works 
