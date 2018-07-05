@@ -17,13 +17,17 @@ file descriptor referring to thw console.
 option 6 and 7 I have not added anything to they open nano text editor.
 
 future uses:
-	I would like to have a auto maker side that can create 1 10 - 100 
-	scripts and test them in a virtual shell, result the test sucess
+	I would like to have a auto bash make side that could create 
+	anywhere from 1-10 - or even 100 randomly created scripts.
+	
+	Then have them test run in a virtual shell,
+	omit result's on the test screen with a tally of sucess.
+	or to have it use shell templates to only need to slightly edit 
+	or test with other scripts.
  	
 	I would like to also add certain code statement such as , if for while 
 	auto statements to speed up testing and writing.
 
-  	Also to have the Menu 1-9 extend into a sub menu 1-9
 
 
 
@@ -31,5 +35,4 @@ future uses:
 
 
 
-
-My program that needs more work on 
+My program, that needs more work on 
