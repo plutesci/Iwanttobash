@@ -42,11 +42,11 @@ ICODE MENU
 1 - Start a new Bash Script 
 2 - Make it Executable
 3 - Run Bash Program
-4 - Prep add a shebang
+4 - Continue working on script
 5 - start a new Python Idle
 6 - Start a new php program
 7 - start a New Ruby Code
-
+8 - Add a shebang
 0 - exit program
 "
 	echo -n "Enter selection: "
@@ -55,11 +55,12 @@ ICODE MENU
 	case $selection in
 	1 ) nano $text.bash ; umask 022 $text.bash ;;
 	2 ) chmod 755 $text.bash ;;
-	3 ) openvt -f ;;
-	4 ) cat > $text.bash | `#!/bin/bash` ;;
+	3 ) openvt -swf -- bash `./$text.bash` ;; # not working :(
+	4 ) nano $text.bash ;;
 	5 ) idle ;;
 	6 ) nano ;;
 	7 ) nano ;;
+	8 ) cat > $text.bash | `#!/bin/bash` ;;
 	0 ) exit ;;
 	* ) echo "Please enter 1, 2, 3, 4, 5, or 0"
 	esac
