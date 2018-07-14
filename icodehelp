@@ -1,0 +1,17 @@
+This is a help document for my program icode
+
+It is a shell application, that can create shell scripts being able to 
+make them executable while aiding the user in shell programming 
+
+to run your named bash script you can open a new shell by selecting option 3 
+and that will open a new shell window where the user can type ./filename.bash
+to execute the script 
+
+option 4 will allow you to continue working on your script
+
+you call make a bash script executable from this application 
+you can also open a new shell window and continue working on the script at 
+any time 
+
+scroll upwards
+
