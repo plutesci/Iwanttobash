@@ -22,7 +22,7 @@ echo "chmod 755 test.bash"	# change test.bash
 echo "nano test.bash"	# change test.bash
 echo "Exit Ctrl c" 
 echo ###################
-echo '#!/bin/bash' >> $text.bash
+echo '#!/bin/bash' >> "$text.bash"
 
 # I want to add an option to ask user if they want to start a new bash \
 # program yes \ no? 
@@ -35,7 +35,7 @@ echo '#!/bin/bash' >> $text.bash
 # when playing i found a program called openvt, It would be great to have the 
 # bash program open virtual termin and run the output 
 echo -n "Please Enter a Filename For Your New Bash Script > "
-read text
+read -r text 
 echo "Your New Bash Script is named: $text"
 
 # chmod +x $text.bash
@@ -58,17 +58,17 @@ ICODE MENU
 0 - Exit Program
 "
 	echo -n "Enter selection: "
-	read selection
+	read -r selection
 	echo ""
 	case $selection in
-	1 ) echo "#!/bin/bash" > $text.bash ; nano $text.bash  ;;
-	2 ) chmod 755 $text.bash ;;
-	3 ) gnome-terminal `./$text.bash` ;; 
-	4 ) nano $text.bash ;;
+	1 ) echo "#!/bin/bash" > "$text.bash" ; nano "$text.bash"  ;;
+	2 ) chmod 755 "$text.bash" ;;
+	3 ) gnome-terminal "(./""$text.bash"")" ;; 
+	4 ) nano "$text.bash" ;;
 	5 ) idle ;;
 	6 ) gnome-terminal ;;
 	7 ) nano ;; # would be something like grep a special crafted document
-	8 ) cat > $text.bash | `#!/bin/bash` ;;
+	8 ) echo "#!/bin/bash" >> "$text.bash" ;;
 	9 ) cat icodehelp ;;
 	0 ) exit ;;
 	* ) echo "Please enter 1, 2, 3, 4, 5, 6, 7, 8,9, or 0"
