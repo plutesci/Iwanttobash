@@ -22,7 +22,7 @@ echo "chmod 755 test.bash"	# change test.bash
 echo "nano test.bash"	# change test.bash
 echo "Exit Ctrl c" 
 echo ###################
-# exec '#!/bin/bash' > test.sh
+echo '#!/bin/bash' >> $text.bash
 
 # I want to add an option to ask user if they want to start a new bash \
 # program yes \ no? 
@@ -50,18 +50,18 @@ ICODE MENU
 2 - Make it Executable
 3 - Run Bash Program
 4 - Continue working on script
-5 - start a new Python Idle
+5 - Start python idle
 6 - Open a new shell
 7 - Create Automatic Shell scripts
 8 - Add a shebang
 9 - Help
-0 - exit program
+0 - Exit Program
 "
 	echo -n "Enter selection: "
 	read selection
 	echo ""
 	case $selection in
-	1 ) nano $text.bash ; umask 022 $text.bash ;;
+	1 ) echo "#!/bin/bash" > $text.bash ; nano $text.bash  ;;
 	2 ) chmod 755 $text.bash ;;
 	3 ) gnome-terminal `./$text.bash` ;; 
 	4 ) nano $text.bash ;;
