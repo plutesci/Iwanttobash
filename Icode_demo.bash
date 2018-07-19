@@ -12,15 +12,15 @@ clear
 # figlet is a banner aswell to install that just type in your terminal
 # sudo apt-get install figlet
 figlet "Icode"
-echo Showing the command line steps to start a Hello World program
+echo Showing a way to use the command line steps to start a Hello World program
 echo Where you see test.bash, Please rename test.bash
 echo Follow Steps Below...
 echo ####################
 echo "echo '#!/bin/bash' > test.bash " #change test
 echo "'echo Hello World' >> test.bash "	# change test.bash
-echo chmod 755 test.sh	# change test.sh
-echo nano test.sh	# change test.sh
-#echo Exit Ctrl c 
+echo "chmod 755 test.bash"	# change test.bash
+echo "nano test.bash"	# change test.bash
+echo "Exit Ctrl c" 
 echo ###################
 # exec '#!/bin/bash' > test.sh
 
@@ -71,7 +71,7 @@ ICODE MENU
 	8 ) cat > $text.bash | `#!/bin/bash` ;;
 	9 ) cat "icodehelp" ;;
 	0 ) exit ;;
-	* ) echo "Please enter 1, 2, 3, 4, 5, or 0"
+	* ) echo "Please enter 1, 2, 3, 4, 5, 6, 7, 8,9, or 0"
 	esac
 done
 
