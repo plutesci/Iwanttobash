@@ -69,7 +69,7 @@ ICODE MENU
 	6 ) gnome-terminal ;;
 	7 ) nano ;; # would be something like grep a special crafted document
 	8 ) cat > $text.bash | `#!/bin/bash` ;;
-	9 ) cat "icodehelp" ;;
+	9 ) cat icodehelp ;;
 	0 ) exit ;;
 	* ) echo "Please enter 1, 2, 3, 4, 5, 6, 7, 8,9, or 0"
 	esac
