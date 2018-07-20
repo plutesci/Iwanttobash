@@ -53,7 +53,7 @@ ICODE MENU
 5 - Start python idle
 6 - Open a new shell
 7 - Create Automatic Shell scripts
-8 - Add a shebang
+8 - Delete the script
 9 - Help
 0 - Exit Program
 "
@@ -63,15 +63,15 @@ ICODE MENU
 	case $selection in
 	1 ) echo "#!/bin/bash" > "$text.bash" ; nano "$text.bash"  ;;
 	2 ) chmod 755 "$text.bash" ;;
-	3 ) gnome-terminal "(./""$text.bash"")" ;; 
+	3 ) gnome-terminal ; echo "./$text.bash" ;; 
 	4 ) nano "$text.bash" ;;
 	5 ) idle ;;
 	6 ) gnome-terminal ;;
 	7 ) nano ;; # would be something like grep a special crafted document
-	8 ) echo "#!/bin/bash" >> "$text.bash" ;;
+	8 ) echo "#!/bin/bash" > "$text.bash" ;;
 	9 ) cat icodehelp ;;
 	0 ) exit ;;
-	* ) echo "Please enter 1, 2, 3, 4, 5, 6, 7, 8,9, or 0"
+	* ) echo "Please enter 1, 2, 3, 4, 5, 6, 7, 8, 9, or 0"
 	esac
 done
 
