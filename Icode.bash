@@ -63,10 +63,10 @@ ICODE MENU
 	case $selection in
 	1 ) echo "#!/bin/bash" > "$text.bash" ; nano "$text.bash"  ;;
 	2 ) chmod 755 "$text.bash" ;;
-	3 ) gnome-terminal ; echo "./$text.bash" ;; 
+	3 ) x-terminal-emulator; echo "./$text.bash" ;; 
 	4 ) nano "$text.bash" ;;
 	5 ) idle ;;
-	6 ) gnome-terminal ;;
+	6 ) x-terminal-emulator ;;
 	7 ) nano ;; # would be something like grep a special crafted document
 	8 ) echo "#!/bin/bash" > "$text.bash" ;;
 	9 ) cat icodehelp ;;
